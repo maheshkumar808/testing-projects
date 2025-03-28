@@ -14,8 +14,8 @@ const index = () => {
   };
   return (
     <div className="bg-blue-500 w-full h-screen flex justify-center ">
-      <div className="container max-w-lg mx-auto p-7 my-20 bg-green-600 rounded-lg text-center ">
-        <h1 className="text-5xl">To-do-list</h1>
+      <div className="container max-w-lg mx-auto p-7 my-20  rounded-lg text-center ">
+        <h1 className="text-5xl font-bold">To-do-list</h1>
         <div className="mt-6 ">
           <InputBox addList={addList} />
         </div>

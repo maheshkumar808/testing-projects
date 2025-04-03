@@ -6,7 +6,7 @@ import axios from 'axios';
 function index() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
-  const APIkey = `89e01265144635593e2d0c9036c11107`;
+  const APIkey = process.env.REACT_APP_WEATHER_API_KEY;
   // const API = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}`;
 
   const getCoordinates = async () => {

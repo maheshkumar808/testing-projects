@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Home } from './Home';
 import Todo from '../src/todo';
 import TempratureConverter from './tempratureConverter';
+import WeatherApp from '/src/weatherApp';
 function App() {
   return (
     <Router>
@@ -12,6 +13,7 @@ function App() {
           path="/project/temperature-converter"
           element={<TempratureConverter />}
         />
+        <Route path="/project/weatherApp" element={<WeatherApp />} />
       </Routes>
     </Router>
   );

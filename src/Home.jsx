@@ -17,6 +17,9 @@ export const Home = () => {
               Temperature Converter
             </Link>
           </li>
+          <li className="hover:underline hover:text-blue-600">
+            <Link to="/project/weatherApp">Weather App</Link>
+          </li>
         </ul>
       </div>
     </div>

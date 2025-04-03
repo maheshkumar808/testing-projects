@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Button({ children, ...props }) {
+function Button({ children, color = 'bg-green-500', ...props }) {
   return (
     <div>
       <button
         {...props}
-        className="py-2 px-4  rounded-full bg-green-500 cursor-pointer font-bold"
+        className={`${color} py-2 px-4  rounded-full  cursor-pointer font-bold`}
       >
         {children}
       </button>

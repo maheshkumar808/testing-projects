@@ -3,10 +3,10 @@ import Input from '../components/Input';
 import Button from '../components/Button';
 import axios from 'axios';
 
-function index() {
+function Index() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
-  const APIkey = process.env.REACT_APP_WEATHER_API_KEY;
+  const APIkey = import.meta.env.VITE_WEATHER_API_KEY;
   // const API = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}`;
 
   const getCoordinates = async () => {
@@ -79,4 +79,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

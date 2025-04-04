@@ -6,10 +6,13 @@ import axios from 'axios';
 function Index() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
+  const [error, setError] = useState('');
+
   const APIkey = import.meta.env.VITE_WEATHER_API_KEY;
   // const API = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}`;
 
   const getCoordinates = async () => {
+    setError('');
     try {
       const response = await axios.get(
         `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIkey}`,
@@ -20,14 +23,20 @@ function Index() {
         console.log(`Latitude: ${lat}, Longitude: ${lon}`);
         return { lat, lon };
       } else {
-        console.log('City not found.');
+        setError('City not found. Please try again.');
+        return null;
       }
     } catch (error) {
+      setError('Something went wrong while fetching location.');
       console.error('Error fetching coordinates:', error);
+      return null;
     }
   };
 
   const fetchWeather = async () => {
+    const coordinates = await getCoordinates();
+    if (!coordinates) return;
+
     try {
       const { lat, lon } = await getCoordinates();
       // console.log('cordinates', cordinates);
@@ -37,6 +46,7 @@ function Index() {
       console.log('Weather res', res);
       setWeather(res.data);
     } catch (error) {
+      setError('Failed to fetch weather data.');
       console.log(error);
     }
   };
@@ -66,6 +76,11 @@ function Index() {
             Enter
           </Button>
         </div>
+        {error && (
+          <div className="mt-4 text-red-500 font-semibold text-left">
+            {error}
+          </div>
+        )}
         <div className="mt-10 grid grid-cols-2  place-items-start">
           <div className="col-span-1">city:{weather?.name}</div>
           <div>Deg: {weather?.wind?.deg}</div>

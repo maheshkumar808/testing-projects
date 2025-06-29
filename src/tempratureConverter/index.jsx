@@ -3,8 +3,8 @@ import Form from './Form';
 
 function index() {
   return (
-    <div className="bg-blue-600 w-full  flex justify-center ">
-      <div className="container max-w-xl mx-auto p-7 my-20  rounded-lg text-center border-2">
+    <div className="bg-blue-600 w-full h-screen flex justify-center items-center">
+      <div className="container max-w-xl mx-auto p-7 my-20  rounded-lg text-center border-2 shadow-xl shadow-amber-50">
         <h1 className="text-5xl font-bold animate-pulse">
           Temperature Converter🌡️
         </h1>

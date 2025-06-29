@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 function Index() {
   const [city, setCity] = useState('');
@@ -23,11 +24,20 @@ function Index() {
         console.log(`Latitude: ${lat}, Longitude: ${lon}`);
         return { lat, lon };
       } else {
-        setError('City not found. Please try again.');
+        // setError('City not found. Please try again.');
+        Swal.fire({
+          icon: 'error',
+          title: 'City not found',
+          text: 'Please try again.',
+        });
         return null;
       }
     } catch (error) {
-      setError('Something went wrong while fetching location.');
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Something went wrong while fetching location.',
+      });
       console.error('Error fetching coordinates:', error);
       return null;
     }
@@ -60,34 +70,36 @@ function Index() {
   };
 
   return (
-    <div className="h-screen text-center flex flex-col justify-center items-center">
-      <h1 className="text-7xl  bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text ">
-        Weather App🌤
+    <div className="h-screen bg-gradient-to-b from-blue-400 to-indigo-600 flex flex-col justify-center items-center p-4">
+      <h1 className="text-6xl font-bold text-white drop-shadow-lg mb-8 animate-pulse ">
+        Weather App 🌤
       </h1>
-      <div className="container mx-auto  max-w-sm text-center mt-10 p-5 bg-gray-950 rounded-lg">
-        <div className="flex justify-start gap-x-4">
+      <div className="  rounded-2xl p-6 max-w-md w-full shadow-xl">
+        <div className="flex gap-4">
           <Input
             type="text"
             placeholder="Enter your city"
             value={city}
             onChange={(e) => setCity(e.target.value)}
+            className="flex-1 p-3 rounded-xl border border-gray-300 text-black"
           />
-          <Button onClick={fetchWeather} color="bg-gray-900">
-            Enter
+          <Button
+            onClick={fetchWeather}
+            className="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition"
+          >
+            Search
           </Button>
         </div>
         {error && (
-          <div className="mt-4 text-red-500 font-semibold text-left">
-            {error}
-          </div>
+          <div className="mt-4 text-red-600 font-semibold">{error}</div>
         )}
-        <div className="mt-10 grid grid-cols-2  place-items-start">
-          <div className="col-span-1">city:{weather?.name}</div>
+        <div className="mt-6 grid grid-cols-2 gap-4 text-white">
+          <div>City: {weather?.name}</div>
           <div>Deg: {weather?.wind?.deg}</div>
           <div>Sunrise: {convertUnixToTime(weather?.sys?.sunrise)}</div>
-          <div>Sunset: {convertUnixToTime(weather?.sys?.sunset)} </div>
-          <div>Wind speed: {weather?.wind.speed}</div>
-          <div>Humidity: {weather?.main.humidity}</div>
+          <div>Sunset: {convertUnixToTime(weather?.sys?.sunset)}</div>
+          <div>Wind: {weather?.wind.speed} m/s</div>
+          <div>Humidity: {weather?.main.humidity}%</div>
         </div>
       </div>
     </div>

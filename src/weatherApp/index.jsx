@@ -16,7 +16,7 @@ function Index() {
     setError('');
     try {
       const response = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIkey}`,
+        `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIkey}`,
       );
 
       if (response.data.length > 0) {

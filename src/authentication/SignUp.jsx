@@ -42,7 +42,6 @@ function SignUp() {
           <label className="text-2xl">E-mail</label>
           <Input
             type="e-mail"
-            onChange=""
             placeholder="e-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}

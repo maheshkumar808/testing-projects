@@ -6,6 +6,7 @@ import WeatherApp from '/src/weatherApp';
 import Authentication from '../src/authentication/index';
 import SignIn from './authentication/SignIn';
 import SignUp from './authentication/SignUp';
+import Counter from '../src/counter/index';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/project/authentication" element={<Authentication />} />
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/counter" element={<Counter />} />
       </Routes>
     </Router>
   );

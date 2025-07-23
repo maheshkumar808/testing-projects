@@ -25,6 +25,9 @@ export const Home = () => {
               Authentication With Firebase
             </Link>
           </li>
+          <li className="hover:underline hover:text-blue-600">
+            <Link to="/counter">Counter</Link>
+          </li>
         </ul>
       </div>
     </div>

@@ -33,22 +33,6 @@ function Form() {
     setKelvin(0);
   };
   return (
-    // <form>
-    //   <label>celsius</label>
-    //   <Input type="number" value={celsius} onChange={handleCelsiusChange} />
-    //   <br />
-    //   <label>fahrenheit</label>
-    //   <Input
-    //     type="number"
-    //     value={fahrenheit}
-    //     onChange={handleFahrenheitChange}
-    //   />
-    //   <br />
-    //   <label>kelvin</label>
-    //   <Input value={kelvin} onChange={handleKelvinChange} />
-    //   <br />
-    //   <Button onClick={clearData}>CLEAR</Button>
-    // </form>
     <form className="space-y-4 text-left">
       <div>
         <label className="block text-lg font-semibold mb-1">Celsius</label>

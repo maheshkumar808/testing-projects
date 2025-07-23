@@ -17,7 +17,7 @@ function index() {
     if (count > 0) {
       setCount(count - 1);
     }
-    if (count > 0) {
+    if (count === 0) {
       alert(
         'Count has reached 0 , Now you cannot Decrese count value less than 0 ',
       );

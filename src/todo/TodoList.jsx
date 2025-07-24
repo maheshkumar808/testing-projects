@@ -1,19 +1,3 @@
-// import React from 'react';
-// function TodoList({ data, onDelete }) {
-//   return (
-//     <div className="bg-red-500 flex justify-between ">
-//       {data.map((item, index) => (
-//         <li className="text-left " key={index + 1}>
-//           {item}{' '}
-//           <button className="cursor-pointer" onClick={() => onDelete(index)}>
-//             ✖️
-//           </button>
-//         </li>
-//       ))}
-//     </div>
-//   );
-// }
-
 // export default TodoList;
 import React from 'react';
 

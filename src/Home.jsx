@@ -28,6 +28,11 @@ export const Home = () => {
           <li className="hover:underline hover:text-blue-600">
             <Link to="/counter">Counter</Link>
           </li>
+          <li className="hover:underline hover:text-blue-600">
+            <Link to="/jsonplaceholder/api">
+              Fetch API from jsonplaceholder
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

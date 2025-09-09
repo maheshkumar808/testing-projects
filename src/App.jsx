@@ -10,6 +10,7 @@ import Counter from '../src/counter/index';
 import Jsonplaceholder from '/src/jsonplaceholder/index';
 import Posts from '/src/jsonplaceholder/Posts';
 import Comments from './jsonplaceholder/Comments';
+import Calculator from './calculator/index';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/jsonplaceholder/api" element={<Jsonplaceholder />} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/comments" element={<Comments />} />
+        <Route path="/calculator" element={<Calculator />} />
       </Routes>
     </Router>
   );

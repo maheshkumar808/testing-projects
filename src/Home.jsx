@@ -33,6 +33,9 @@ export const Home = () => {
               Fetch API from jsonplaceholder
             </Link>
           </li>
+          <li className="hover:underline hover:text-blue-600">
+            <Link to="/calculator">Calculator</Link>
+          </li>
         </ul>
       </div>
     </div>

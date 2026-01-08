@@ -31,6 +31,7 @@ function App() {
         <Route path="/posts" element={<Posts />} />
         <Route path="/comments" element={<Comments />} />
         <Route path="/calculator" element={<Calculator />} />
+        <Route path="/redux" element={<TextSpeechGenerator />} />
       </Routes>
     </Router>
   );

@@ -36,6 +36,9 @@ export const Home = () => {
           <li className="hover:underline hover:text-blue-600">
             <Link to="/calculator">Calculator</Link>
           </li>
+          <li className="hover:underline hover:text-blue-600">
+            <Link to="/redux">learn redux</Link>
+          </li>
         </ul>
       </div>
     </div>

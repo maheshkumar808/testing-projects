@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../components/Button';
+import CalculatorButton from '../calculator/CalculatorButton';
 
 function index() {
   const [displayValue, setDisplayValue] = useState('');
@@ -15,121 +15,116 @@ function index() {
   };
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <div className="max-w-sm min-w-sm p-6 bg-amber-600 ">
-        <h1 className="text-blue-800 font-extrabold text-4xl mb-4">
-          Calculator
-        </h1>
-        <div className="bg-gray-300 text-end p-4 break-words overflow-hidden ">
+      <div className="max-w-sm min-w-sm p-6 bg-blue-600 rounded-lg">
+        <h1 className="text-white font-extrabold text-4xl mb-4">Calculator</h1>
+        <div className="bg-gray-300 text-end text-blue-600 font-bold p-4 break-words overflow-hidden rounded-lg">
           {displayValue || 0}
         </div>
-        <div className=" mt-5 grid grid-cols-4 gap-4">
-          <button
+        <div className=" mt-5 grid grid-cols-4 gap-4 ">
+          <CalculatorButton
             onClick={() => setDisplayValue('')}
-            className="col-span-2 bg-gray-300 p-3"
+            className={'col-span-2'}
           >
             C
-          </button>
-          <button onClick={removeDigits} className="col-span-1 bg-gray-300 p-3">
+          </CalculatorButton>
+          <CalculatorButton onClick={removeDigits} className={'col-span-1'}>
             Del
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('+')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             +
-          </button>
+          </CalculatorButton>
 
-          <button
+          <CalculatorButton
             onClick={() => handleClick('1')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             1
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('2')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             2
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('3')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             3
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('*')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             *
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('4')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             4
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('5')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             5
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             value={'6'}
             onClick={() => handleClick('6')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             6
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('/')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             /
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('7')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             7
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('8')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             8
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('9')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             9
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('-')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             -
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('.')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             .
-          </button>
-          <button
+          </CalculatorButton>
+          <CalculatorButton
             onClick={() => handleClick('0')}
-            className="col-span-1 bg-gray-300 p-3"
+            className={'col-span-1'}
           >
             0
-          </button>
-          <button
-            onClick={handleTotalValue}
-            className="col-span-2 bg-gray-300 p-3"
-          >
+          </CalculatorButton>
+          <CalculatorButton onClick={handleTotalValue} className={'col-span-2'}>
             =
-          </button>
+          </CalculatorButton>
         </div>
       </div>
     </div>

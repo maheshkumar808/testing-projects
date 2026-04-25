@@ -8,35 +8,35 @@ export const Home = () => {
         <h1 className="text-5xl text-blue-600 font-bold text-center">
           My small projects list
         </h1>
-        <ul className="mt-8  list-disc text-left">
-          <li className="hover:underline hover:text-blue-600">
+        <ul className="mt-8  list-disc text-left ">
+          <li className="hover:underline hover:text-blue-600 hover:text-xl">
             <Link to="/project/todo">TO DO list</Link>
           </li>
-          <li className="hover:underline hover:text-blue-600">
+          <li className="hover:underline hover:text-blue-600 hover:text-xl">
             <Link to="/project/temperature-converter">
               Temperature Converter
             </Link>
           </li>
-          <li className="hover:underline hover:text-blue-600">
+          <li className="hover:underline hover:text-blue-600 hover:text-xl">
             <Link to="/project/weatherApp">Weather App</Link>
           </li>
-          <li className="hover:underline hover:text-blue-600">
+          <li className="hover:underline hover:text-blue-600 hover:text-xl">
             <Link to="/project/authentication">
               Authentication With Firebase
             </Link>
           </li>
-          <li className="hover:underline hover:text-blue-600">
+          <li className="hover:underline hover:text-blue-600 hover:text-xl">
             <Link to="/counter">Counter</Link>
           </li>
-          <li className="hover:underline hover:text-blue-600">
+          <li className="hover:underline hover:text-blue-600 hover:text-xl">
             <Link to="/jsonplaceholder/api">
               Fetch API from jsonplaceholder
             </Link>
           </li>
-          <li className="hover:underline hover:text-blue-600">
+          <li className="hover:underline hover:text-blue-600 hover:text-xl">
             <Link to="/calculator">Calculator</Link>
           </li>
-          <li className="hover:underline hover:text-blue-600">
+          <li className="hover:underline hover:text-blue-600 hover:text-xl">
             <Link to="/redux">learn redux</Link>
           </li>
         </ul>

@@ -11,6 +11,7 @@ import Jsonplaceholder from '/src/jsonplaceholder/index';
 import Posts from '/src/jsonplaceholder/Posts';
 import Comments from './jsonplaceholder/Comments';
 import Calculator from './calculator/index';
+import ReactRedux from '../src/react -redux/index';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
         <Route path="/posts" element={<Posts />} />
         <Route path="/comments" element={<Comments />} />
         <Route path="/calculator" element={<Calculator />} />
-        <Route path="/redux" element={<TextSpeechGenerator />} />
+        <Route path="/redux" element={<ReactRedux />} />
       </Routes>
     </Router>
   );

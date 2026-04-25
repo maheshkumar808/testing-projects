@@ -61,7 +61,7 @@ function SignUp() {
             className="rounded-sm  border-2 border-white shadow-b-white"
             type="submit"
           >
-            Confirm
+            Submit
           </Button>
         </div>
       </form>
